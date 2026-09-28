@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secure-app-pod
+  namespace: default
+spec:
+  serviceAccountName: previewer-sa
+  containers:
+  - name: app-container
+    image: alpine
+    command: ["sh", "-c", "echo 'Application Started!'; echo 'My Secure DB Password is: ' $DB_PASSWORD; sleep 3600"]
+    env:
+    - name: DB_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: db-vault
+          key: password
