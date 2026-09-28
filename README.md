@@ -1,9 +1,6 @@
 **Securing Microservices on Kubernetes**. 
 This chapter is all about moving from a system that simply *runs* to one that is locked down against attackers who want to steal data, run botnets, or corrupt your system.
 
-Using-- **Omni-Previewer** -- how to lock down a Kubernetes cluster.
-
-
 ## 1. The Concepts Explained in Simplest Terms
 
 * **User Accounts vs. Service Accounts:** * *User Accounts* are for **humans** (like you logging into the dashboard via GitHub OAuth2).
